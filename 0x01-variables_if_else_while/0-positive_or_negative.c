@@ -1,26 +1,30 @@
-# include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+* 
+* Return: Always 0
+*
+*/
+
 int main(void)
 {
-	int c, i;
+	int n;
 
-	c = i = '0';
-
-	for(c='0';c<='9';c++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
 	{
-		for(i='0';i<='9';i++)
-		{
-			putchar(c);
-			putchar(i);
-
-			if((c!='9') || (c=='9' && i!='9'))
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
+		printf("%d is positive\n", n);
 	}
-	putchar('\n');
-	return(0);
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else
+		printf("%d is negative\n", n);
+	return (0);
 }
+
 
 
