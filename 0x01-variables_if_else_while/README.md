@@ -1,2 +1,1 @@
-#!/bin/bash
-not empty
+C - Variables, if, else, while
